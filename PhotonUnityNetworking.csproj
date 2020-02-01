@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{536BF1E1-146C-B8F4-6E94-156F9D0578EE}</ProjectGuid>
+    <ProjectGuid>{F47A8AB9-0356-B8F7-B058-40E24F6DDFB2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonUnityNetworking</AssemblyName>
@@ -79,10 +79,10 @@
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformViewClassic.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonUnityNetworking.asmdef" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/dev/Projects/Unity Projects/GGJ2020_ReBrain/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/dev/Projects/Unity Projects/GGJ2020_ReBrain/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -270,14 +270,17 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>C:/dev/Projects/Unity Projects/GGJ2020_ReBrain/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/dev/Projects/Unity Projects/GGJ2020_ReBrain/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -627,7 +630,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{91D0E521-AB7C-551C-1DBA-06C552858494}</Project>
+      <Project>{F90A6301-8D59-8666-428B-E8DBFB58F44E}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
   </ItemGroup>
