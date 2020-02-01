@@ -171,8 +171,10 @@ public class MainPlayer : MonoBehaviour {
 
     private void Damage() {
         _playerHealth -= 1;
-        if (_playerHealth <= 0)
+        if (_playerHealth <= 0) {
             OnGameOver();
+            UIManager.Instance.ShowGameOvahPanel();
+        }
 
         UIManager.Instance.UpdatePlayerLives(_playerHealth);
     }
