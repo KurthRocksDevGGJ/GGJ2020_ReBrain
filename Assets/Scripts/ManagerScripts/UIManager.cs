@@ -69,4 +69,8 @@ public class UIManager : MonoBehaviour {
         _gameOvahPanel.gameObject.SetActive(false);
         Time.timeScale = 1F;
     }
+
+    public void LoadScene(string _sceneName) {
+        SceneManager.LoadScene(_sceneName);
+    }
 }

@@ -76,7 +76,10 @@ public class MainPlayer : MonoBehaviour {
 
         _timeBody = GetComponent<TimeBody>();
 
-        UIManager.Instance.UpdatePlayerLives(_playerHealth);
+        if (!UIManager.Instance)
+            UIManager.Instance.UpdatePlayerLives(_playerHealth);
+        else
+            Debug.LogError("MainPlayer::Start(): UIManager instance not found.");
     }
 
     // Update is called once per frame
