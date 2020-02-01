@@ -110,8 +110,10 @@ public class MainPlayer : MonoBehaviour {
             //_rigidbody2D.velocity = (direction * _playerSpeed);
 
             _rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") * _playerSpeed, _rigidbody2D.velocity.y);
-            DebugManager.Instance.SetPlayerPosition(transform.position);
-            DebugManager.Instance.SetCurrentDebugTestText("" + Input.GetAxis("Horizontal") + " * " + _playerSpeed + ", " + _rigidbody2D.velocity.y);
+            if (DebugManager.Instance) {
+                DebugManager.Instance.SetPlayerPosition(transform.position);
+                DebugManager.Instance.SetCurrentDebugTestText("" + Input.GetAxis("Horizontal") + " * " + _playerSpeed + ", " + _rigidbody2D.velocity.y);
+            }
         } else {
             //transform.Translate(Vector2.right * _playerSpeed * Time.deltaTime);
             //_rigidbody2D.AddForce(Vector2.right * _playerSpeed, ForceMode2D.Impulse);
@@ -119,9 +121,12 @@ public class MainPlayer : MonoBehaviour {
 
             //_rigidbody2D.velocity = new Vector2(7F, 0F);
             //_rigidbody2D.velocity = new Vector2(_playerSpeed, 0);
+
             _rigidbody2D.velocity = (Vector2.right * _playerSpeed);
-            DebugManager.Instance.SetPlayerPosition(transform.position);
-            DebugManager.Instance.SetCurrentDebugTestText("" + Vector2.right + " * " + _playerSpeed);
+            if (DebugManager.Instance) {
+                DebugManager.Instance.SetPlayerPosition(transform.position);
+                DebugManager.Instance.SetCurrentDebugTestText("" + Vector2.right + " * " + _playerSpeed);
+            }
         }
 
         // Reset player

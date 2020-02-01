@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Environment
   - Ground
+  - Bouncable
   layers:
   - Default
   - TransparentFX
