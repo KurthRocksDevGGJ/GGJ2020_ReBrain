@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba1a179e553446f0a08606778f559f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenOffset: {x: 0, y: 30, z: 0}
+  screenOffset: {x: 0, y: 70, z: 0}
   playerNameText: {fileID: 11467878}
   playerHealthSlider: {fileID: 11470066}
 --- !u!225 &225577372249270236

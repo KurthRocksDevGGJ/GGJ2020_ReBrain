@@ -21,7 +21,14 @@ namespace Photon.Pun.Demo.PunBasics
 	/// </summary>
 	public class PlayerUI : MonoBehaviour
     {
+		public bool bfollow {
+			get { return _bfollow; }
+			set { _bfollow = value; }
+		}
+
         #region Private Fields
+
+		private bool _bfollow = false;
 
 	    [Tooltip("Pixel offset from the player target")]
         [SerializeField]
@@ -88,20 +95,20 @@ namespace Photon.Pun.Demo.PunBasics
 		void LateUpdate () {
 
 			// Do not show the UI if we are not visible to the camera, thus avoid potential bugs with seeing the UI, but not the player itself.
-			if (targetRenderer!=null)
-			{
-				this._canvasGroup.alpha = targetRenderer.isVisible ? 1f : 0f;
-			}
+			// if (targetRenderer!=null)
+			// {
+			// 	this._canvasGroup.alpha = targetRenderer.isVisible ? 1f : 0f;
+			// }
 			
 			// #Critical
-			// Follow the Target GameObject on screen.
-			// if (targetTransform!=null)
-			// {
-			// 	targetPosition = targetTransform.position;
-			// 	targetPosition.y += characterControllerHeight;
+			// Follow the Target GameObject on screen
+			if (targetTransform!=null && bfollow)
+			{
+				targetPosition = targetTransform.position;
+				targetPosition.y += characterControllerHeight;
 				
-			// 	this.transform.position = Camera.main.WorldToScreenPoint (targetPosition) + screenOffset;
-			// }
+				this.transform.position = Camera.main.WorldToScreenPoint (targetPosition) + screenOffset;
+			}
 
 		}
 
