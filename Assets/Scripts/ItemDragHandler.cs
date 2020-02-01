@@ -25,7 +25,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
         if (!IsMoved)
         {
             IsMoved = true;
-            Instantiate(myPrefab, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Quaternion.identity);
+            Instantiate(myPrefab, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y),myPrefab.transform.rotation);
+            
             ResetPosition();
 
         }
