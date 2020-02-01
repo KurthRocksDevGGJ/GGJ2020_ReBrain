@@ -152,6 +152,11 @@ namespace Photon.Pun.Demo.PunBasics
 			PhotonNetwork.LeaveRoom();
 		}
 
+		public void JoinRoom(string roomName)
+		{
+			PhotonNetwork.JoinRoom(roomName);
+		}
+
 		public void QuitApplication()
 		{
 			Application.Quit();

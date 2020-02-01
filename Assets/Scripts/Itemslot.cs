@@ -1,53 +1,28 @@
 ﻿using UnityEngine;
 
-public class Itemslot : MonoBehaviour
+namespace Photon.Pun.Demo.PunBasics
 {
-    [SerializeField]
-    private GameObject template;
-    private ItemDragHandler item;
-    
-
-
-    private void Start()
+    public class Itemslot : MonoBehaviourPunCallbacks
     {
+        [SerializeField]
+        private GameObject template;
+        private ItemDragHandler item;
         
-        createNewInstance();
-        setPosToZero();
-        
-    }
-
-    private bool InstanceInDropArea()
-    {
-        var dropArea = transform.parent as RectTransform;
-        return dropArea.rect.Contains(item.transform.position);
-    }
-    
-    private void setPosToZero()
-    {
-        item.ResetPosition();
-    }
-
-    private void createNewInstance()
-    {
-        var instance = Instantiate(template, transform, false);
-        item = instance.GetComponent<ItemDragHandler>();
-    }
-    private void Update()
-    {
-        if (!item.IsMoved)
-        {
-            return;
-        }
-        if (InstanceInDropArea() )
-        {
-           // createNewInstance();
-            //setPosToZero();
-        }
-        else 
-        {
-           // item.ResetPosition();
+        private void Start()
+        {        
+            createNewInstance();
+            setPosToZero();
         }
         
-    }
+        private void setPosToZero()
+        {
+            item.ResetPosition();
+        }
 
+        private void createNewInstance()
+        {
+            var instance = Instantiate(template, transform, false);
+            item = instance.GetComponent<ItemDragHandler>();
+        }
+    }
 }

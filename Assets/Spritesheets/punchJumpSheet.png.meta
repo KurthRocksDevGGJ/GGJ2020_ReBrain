@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27fddc57c3657cf4d81447a825cc9b48
+guid: a731f1d9cf40b7848a9a80e73d31d2a9
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -47,7 +47,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +98,31 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -220,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 62e4789c08186dd4ab54009b87de182c
+    spriteID: 7f2c6dcadec0b284d80010e5a55b649d
     internalID: 0
     vertices: []
     indices: 
