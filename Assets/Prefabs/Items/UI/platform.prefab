@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5444696553472852962}
   - component: {fileID: 540152439512665378}
   - component: {fileID: 1543901037412420612}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 984303992bd6b554bb2cb8ce7939d627, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bafab42baa4e3bd44be57726addb33c6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -86,5 +86,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d049501e02a29f147aea68c21aa0c857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 6138342993450246886, guid: 3d442d5c4b4bf894a96da35c0ecdf6ea,
+  myPrefab: {fileID: 6138342993450246886, guid: 2fced7791902b8948a956c2cec11aef6,
     type: 3}

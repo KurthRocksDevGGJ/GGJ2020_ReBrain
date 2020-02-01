@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3278691175337565910}
   - component: {fileID: 7021168046904021014}
   - component: {fileID: 8314272990945349936}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: hammer_idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8899415468103468207, guid: 634ed9e087c9bc04091b64a104495b2b,
+  m_Sprite: {fileID: -4205505557666749429, guid: 8f9db7c2f2ca2524195e86ecd9cc112d,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -87,5 +87,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d049501e02a29f147aea68c21aa0c857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 6546258106835962048, guid: c5abd889f522087469d6006c0ae3a0a5,
+  myPrefab: {fileID: 6546258106835962048, guid: d5e0c44f497f4ed48b28613f22ea18c6,
     type: 3}
