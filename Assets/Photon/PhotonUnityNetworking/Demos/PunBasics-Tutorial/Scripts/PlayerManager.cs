@@ -101,6 +101,10 @@ namespace Photon.Pun.Demo.PunBasics
                 if (photonView.IsMine)
                 {
                     GameObject _uiGo = Instantiate(this.playerUiPrefab);
+                    if(InputScheme == "Runner")
+                    {
+                        _uiGo.GetComponent<PlayerUI>().bfollow = true;
+                    }
                     _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
                 }
             }

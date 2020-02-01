@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd08475b23aa548b7b9d28397d430b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraScrollSpeed: 4
   distance: 7
   height: 3
   heightSmoothLag: 0.3

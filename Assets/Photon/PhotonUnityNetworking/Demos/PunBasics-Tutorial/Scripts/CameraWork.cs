@@ -15,8 +15,10 @@ namespace Photon.Pun.Demo.PunBasics
 	/// <summary>
 	/// Camera work. Follow a target
 	/// </summary>
-	public class CameraWork : MonoBehaviour
+	public class CameraWork : MonoBehaviourPunCallbacks
 	{
+		public float cameraScrollSpeed = 4;
+
         #region Private Fields
 
 	    [Tooltip("The distance in the local x-z plane to the target")]
@@ -73,16 +75,19 @@ namespace Photon.Pun.Demo.PunBasics
 		/// </summary>
 		void LateUpdate()
 		{
-			// The transform target may not destroy on level load, 
-			// so we need to cover corner cases where the Main Camera is different everytime we load a new scene, and reconnect when that happens
-			if (cameraTransform == null && isFollowing)
+			if(photonView.IsMine)
 			{
-				OnStartFollowing();
-			}
+				// The transform target may not destroy on level load, 
+				// so we need to cover corner cases where the Main Camera is different everytime we load a new scene, and reconnect when that happens
+				if (cameraTransform == null && isFollowing)
+				{
+					OnStartFollowing();
+				}
 
-			// only follow is explicitly declared
-			if (isFollowing) {
-				MoveCamera();
+				// only follow is explicitly declared
+				if (isFollowing) {
+					MoveCamera();
+				}
 			}
 		}
 
@@ -99,7 +104,7 @@ namespace Photon.Pun.Demo.PunBasics
 			cameraTransform = Camera.main.transform;
 			isFollowing = true;
 			// we don't smooth anything, we go straight to the right camera shot
-			Cut();
+			//Cut();
 		}
 
 		#endregion
@@ -144,7 +149,7 @@ namespace Photon.Pun.Demo.PunBasics
 	    }
 
 		void MoveCamera() {
-			cameraTransform.position += new Vector3(2 * Time.deltaTime, 0, 0);
+			cameraTransform.position += new Vector3(cameraScrollSpeed * Time.deltaTime, 0, 0);
 		}
 	   
 		/// <summary>
