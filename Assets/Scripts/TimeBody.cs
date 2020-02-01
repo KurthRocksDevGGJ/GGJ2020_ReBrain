@@ -64,4 +64,8 @@ public class TimeBody : MonoBehaviour {
         _isRewinding = false;
         _rigidbody2D.isKinematic = false;
     }
+
+    public void StartRewindTillEnd() {
+        StartRewind();
+    }
 }

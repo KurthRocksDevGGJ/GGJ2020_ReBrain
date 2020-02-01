@@ -37,6 +37,9 @@ public class MainPlayer : MonoBehaviour {
     [SerializeField]
     private AudioClip _soundClipPowerUp = null;
 
+    [SerializeField]
+    private bool _canUseRewind = true;
+
     // TODO: Not showing on editor!!
     [Header("TEMP: Specific Player Controls")]
     [SerializeField]
@@ -57,6 +60,8 @@ public class MainPlayer : MonoBehaviour {
     private bool _isHittingWall = false;
     [SerializeField]
     private bool _invincible = false;
+    [SerializeField]
+    private TimeBody _timeBody = null;
 
     // Start is called before the first frame update
     void Start() {
@@ -68,6 +73,8 @@ public class MainPlayer : MonoBehaviour {
         _playerBodyCollisionBox = GetComponentInChildren<MainPlayerBody>();
         _playerFeetCollisionBox = GetComponentInChildren<MainPlayerFeet>();
         //Debug.Log(_playerBodyCollisionBox.isHittingWall());
+
+        _timeBody = GetComponent<TimeBody>();
 
         UIManager.Instance.UpdatePlayerLives(_playerHealth);
     }
@@ -94,6 +101,11 @@ public class MainPlayer : MonoBehaviour {
             //Debug.Log("Player hitting wall...");
             _rigidbody2D.AddForce(Vector2.left * _pushBackValue, ForceMode2D.Impulse);
             Damage();
+
+            if (_canUseRewind)
+                _timeBody.StartRewindTillEnd();
+            //rewind
+            // GetComponent<TimeBody>().re
 
             //_isHittingWall = false;
         }
@@ -192,7 +204,7 @@ public class MainPlayer : MonoBehaviour {
 
     private IEnumerator DeathSequence() {
         _playerAnimator.SetBool("gameover", true);
-        yield return new WaitForSeconds(2F);
+        yield return new WaitForSeconds(1F);
         if(!_invincible)
             Destroy(this.gameObject);
     }
