@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5444696553472852962}
   - component: {fileID: 540152439512665378}
   - component: {fileID: 1543901037412420612}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: slope1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 984303992bd6b554bb2cb8ce7939d627, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bafab42baa4e3bd44be57726addb33c6, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
