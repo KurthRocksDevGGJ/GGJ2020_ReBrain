@@ -217,4 +217,6 @@ public class MainPlayer : MonoBehaviour {
         _playerAudioSource.clip = _soundClipPowerUp;
         _playerAudioSource.Play();
     }
+
+  
 }

@@ -34,8 +34,17 @@ public class MainPlayerFeet : MonoBehaviour {
             _isGrounded = false;
             GameObject.Find("Player").GetComponent<MainPlayer>().IsGrounded(_isGrounded);
         }
+        
+        if (other.gameObject.CompareTag("spring"))
+        {
+            Debug.Log(other.gameObject.tag);
+            Debug.Log("yeah");
+            Debug.Log(other.gameObject.GetComponent<Animator>());
+            other.gameObject.GetComponent<Animator>().SetBool("isSpringActivated",true);
+        }
     }
     public bool isGrounded() {
         return _isGrounded;
     }
+
 }
