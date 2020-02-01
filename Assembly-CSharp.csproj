@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{482CA332-7FE7-6EB6-67A6-6C2F23AFA643}</ProjectGuid>
+    <ProjectGuid>{E582EBE0-B054-DCCD-623B-A17603ED30BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -74,6 +74,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Scripts\Collectible.cs" />
     <Compile Include="Assets\Scripts\ItemDragHandler.cs" />
     <Compile Include="Assets\Scripts\ItemDropHandler.cs" />
     <Compile Include="Assets\Scripts\ItemManager.cs" />
@@ -96,37 +97,37 @@
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -306,10 +307,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/SynologyDrive/Projekte/unity/GGJ2020/GitVersion/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/Friedrich Emmert/Desktop/GGJ2020_ReBrain/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -659,47 +660,47 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{E2365949-B073-728A-D150-27950350E9FF}</Project>
+      <Project>{D3995C63-1E04-B51E-5A2B-C137A82C109A}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{D32ACF5A-869D-31DC-FEAD-1DB7CA32CE2F}</Project>
+      <Project>{BB7AF766-9D85-D30B-1027-0927C362DD11}</Project>
       <Name>PunDemos.DemoHubEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{EC1F93CB-8E4A-E23D-FB3F-89CA332134C2}</Project>
+      <Project>{B0A08697-D13F-A94F-62CA-F2BE4E61588E}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{DA28AD6E-409E-5711-8C27-4D23AB1F7517}</Project>
+      <Project>{703460D3-03A1-CE60-E4AD-DB85F5BB189A}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{F6919013-DBE1-238D-BC55-9B3DE03E6FF8}</Project>
+      <Project>{CFD4E1E4-46C6-60CD-39BC-57255A3AAE2B}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonWebSocket.csproj">
-      <Project>{8B1A37F9-C5C5-593F-3F4C-6FC4086431C0}</Project>
+      <Project>{95AA2EC5-39B2-FB87-95E0-4D9B7D17ED8C}</Project>
       <Name>PhotonWebSocket</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{F90A6301-8D59-8666-428B-E8DBFB58F44E}</Project>
+      <Project>{91D0E521-AB7C-551C-1DBA-06C552858494}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{F47A8AB9-0356-B8F7-B058-40E24F6DDFB2}</Project>
+      <Project>{536BF1E1-146C-B8F4-6E94-156F9D0578EE}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{CCC85CFE-EF05-090B-ADDC-0ED6FE46C2C3}</Project>
+      <Project>{728DC3B8-314E-760B-4717-E45A2B7D4031}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{B0FBE9A7-7853-7BB4-59D4-F3A4263C71F4}</Project>
+      <Project>{C8CAF3D2-F06C-5D50-B2BA-379A9E481667}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{759032ED-39F4-7BB0-6267-4D59BB4FEE2D}</Project>
+      <Project>{C9B6C854-22AB-D8B8-1C3A-81B8D6535F1F}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
   </ItemGroup>
