@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 27fddc57c3657cf4d81447a825cc9b48
+guid: 6c5b4b9e9145765479029875a969141d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7685795517689998452
-    second: punchJumpSheet_0
+      213: 7592328607100769036
+    second: heartsheet_0
   - first:
-      213: -8271015699632164419
-    second: punchJumpSheet_1
+      213: 5750537653290509623
+    second: heartsheet_1
   - first:
-      213: 2453513808882666347
-    second: punchJumpSheet_2
+      213: 2667916359036175515
+    second: heartsheet_2
   - first:
-      213: -6234446770082837236
-    second: punchJumpSheet_3
+      213: 2172307575172458724
+    second: heartsheet_3
   - first:
-      213: 8988893237517854249
-    second: punchJumpSheet_4
+      213: 8336652787070867692
+    second: heartsheet_4
+  - first:
+      213: -7178759826585324499
+    second: heartsheet_5
+  - first:
+      213: -5354859705841949791
+    second: heartsheet_6
+  - first:
+      213: -5496147472211421470
+    second: heartsheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -47,7 +56,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: punchJumpSheet_0
+      name: heartsheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 199
-        height: 432
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c835ccf92b1965590800000000000000
-      internalID: -7685795517689998452
+      spriteID: c03174c64ae5d5960800000000000000
+      internalID: 7592328607100769036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: punchJumpSheet_1
+      name: heartsheet_1
       rect:
         serializedVersion: 2
-        x: 199
+        x: 16
         y: 0
-        width: 199
-        height: 432
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db1febbfa03773d80800000000000000
-      internalID: -8271015699632164419
+      spriteID: 735a3eb27830ecf40800000000000000
+      internalID: 5750537653290509623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: punchJumpSheet_2
+      name: heartsheet_2
       rect:
         serializedVersion: 2
-        x: 398
+        x: 32
         y: 0
-        width: 199
-        height: 432
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6b87f55fc1ac0220800000000000000
-      internalID: 2453513808882666347
+      spriteID: b940ec61bc7560520800000000000000
+      internalID: 2667916359036175515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: punchJumpSheet_3
+      name: heartsheet_3
       rect:
         serializedVersion: 2
-        x: 597
+        x: 48
         y: 0
-        width: 199
-        height: 432
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d8122b1bbca79a0800000000000000
-      internalID: -6234446770082837236
+      spriteID: 4e86b01fa36952e10800000000000000
+      internalID: 2172307575172458724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: punchJumpSheet_4
+      name: heartsheet_4
       rect:
         serializedVersion: 2
-        x: 796
+        x: 64
         y: 0
-        width: 199
-        height: 432
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,8 +220,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926a92a36c6febc70800000000000000
-      internalID: 8988893237517854249
+      spriteID: ce811255a8db1b370800000000000000
+      internalID: 8336652787070867692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartsheet_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d247980f8fbef5c90800000000000000
+      internalID: -7178759826585324499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartsheet_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3ec330877bfa5b0800000000000000
+      internalID: -5354859705841949791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartsheet_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e65dad6ef2c9b3b0800000000000000
+      internalID: -5496147472211421470
       vertices: []
       indices: 
       edges: []
@@ -220,7 +292,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 62e4789c08186dd4ab54009b87de182c
+    spriteID: be50dcdb7cd8f144cb6e8366e46477fb
     internalID: 0
     vertices: []
     indices: 

@@ -8,6 +8,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
    
 {    
     public bool IsMoved { get; private set; }
+    [SerializeField]
+    private GameObject myPrefab;
    
 
     public void OnDrag(PointerEventData eventData)
@@ -22,7 +24,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if (!IsMoved)
         {
-            IsMoved = true;            
+            IsMoved = true;
+            Instantiate(myPrefab, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Quaternion.identity);
+            ResetPosition();
+
         }
     }
 

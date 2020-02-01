@@ -40,12 +40,12 @@ public class Itemslot : MonoBehaviour
         }
         if (InstanceInDropArea() )
         {
-            createNewInstance();
-            setPosToZero();
+           // createNewInstance();
+            //setPosToZero();
         }
         else 
         {
-            item.ResetPosition();
+           // item.ResetPosition();
         }
         
     }
