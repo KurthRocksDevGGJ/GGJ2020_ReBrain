@@ -11,10 +11,16 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     private Text _playerLivesText = null;
     [SerializeField]
+    private Text _playerCoinsText = null;
+    [SerializeField]
     private GameObject _gameOvahPanel = null;
+    [SerializeField]
+    private GameObject _pauseMenuPanel = null;
     // Move to GameManager??
     [SerializeField]
     private bool _isGameOver = false;
+    [SerializeField]
+    private bool _isPauseMenu = false;
 
     private void Awake() {
         if (Instance == null)
@@ -27,7 +33,9 @@ public class UIManager : MonoBehaviour {
 
     private void Start() {
         if (_playerLivesText == null)
-            Debug.LogError("UIManager::Start(): Text not set.");
+            Debug.LogError("UIManager::Start(): Lives text element not set.");
+        if (_playerCoinsText == null)
+            Debug.LogError("UIManager::Start(): Coins text element not set.");
         if (_gameOvahPanel == null)
             Debug.LogError("UIManager::Start(): GameOver panel not set.");
     }
@@ -41,7 +49,31 @@ public class UIManager : MonoBehaviour {
                 // TODO: Move to GameManager!?
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+        } else {
+            if (_isPauseMenu) {
+                if (Input.GetKeyDown(KeyCode.P)) {
+                    HidePausePanel();
+                    _isPauseMenu = false;
+                }
+            } else {
+                if (Input.GetKeyDown(KeyCode.P)) {
+                    ShowPausePanel();
+                    _isPauseMenu = true;
+                }
+            }
+
         }
+    }
+
+    void ShowPausePanel() {
+        _gameOvahPanel.gameObject.SetActive(false);
+        _pauseMenuPanel.gameObject.SetActive(true);
+        Time.timeScale = 0F;
+    }
+
+    void HidePausePanel() {
+        _pauseMenuPanel.gameObject.SetActive(false);
+        Time.timeScale = 1F;
     }
 
     /*
@@ -58,6 +90,11 @@ public class UIManager : MonoBehaviour {
         // Debug.Log("UIManager::UpdatePlayerLives(): Maybe checking for player lives / death.");
     }
 
+    // TODO: Animated Coins Sprite
+    public void UpdatePlayerCoins(int _coins) {
+        _playerCoinsText.text = "" + _coins.ToString();
+    }
+
     public void ShowGameOvahPanel() {
         _isGameOver = true;
         _gameOvahPanel.gameObject.SetActive(true);
@@ -70,6 +107,7 @@ public class UIManager : MonoBehaviour {
         Time.timeScale = 1F;
     }
 
+    // TODO: GameManager...
     public void LoadScene(string _sceneName) {
         SceneManager.LoadScene(_sceneName);
     }

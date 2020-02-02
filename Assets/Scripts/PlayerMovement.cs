@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Photon.Pun.Demo.PunBasics
-{
-    public class PlayerMovement : MonoBehaviourPunCallbacks
-    {
+namespace Photon.Pun.Demo.PunBasics {
+    public class PlayerMovement : MonoBehaviourPunCallbacks {
         public PlayerController playerController;
 
         public float moveSpeed;
@@ -13,11 +11,12 @@ namespace Photon.Pun.Demo.PunBasics
         private float _horizontalMove = 0f;
         private bool _jump = false;
 
+        [SerializeField]
+        private bool _overridePhotonValue = false;
+
         // Update is called once per frame
-        void Update()
-        {
-            if (photonView.IsMine)
-            {
+        void Update() {
+            if (photonView.IsMine || _overridePhotonValue) {
                 _horizontalMove = moveSpeed;
 
                 if(Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0)) 

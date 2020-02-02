@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 271839900}
   m_Layer: 0
   m_Name: BlueDiamond
-  m_TagString: Untagged
+  m_TagString: Collectibles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectibleType: 1
+  _coinValue: 5
 --- !u!70 &271839900
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

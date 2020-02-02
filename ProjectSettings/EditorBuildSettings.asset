@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/levelthumi.unity
     guid: fee7337abc1a1174aa864016e22c4449
+  - enabled: 1
+    path: Assets/Scenes/level_EXPERTThumi02.unity
+    guid: b8083aa1becc71d4f91ba210198e9aec
+  - enabled: 1
+    path: Assets/Scenes/level_Medium-wieeingutesSteakThumi04.unity
+    guid: 11dfd10897953384899bc3f94b1f6df1
+  - enabled: 1
+    path: Assets/Scenes/level_TutorialThumi01.unity
+    guid: 5d2ab46348f63404aa2eb23743e6b625
+  - enabled: 1
+    path: Assets/Scenes/level_untergroundThumi03.unity
+    guid: 879c9e0b8a461b94daddbf99d0366288
+  - enabled: 1
+    path: Assets/Scenes/LK_MainMenu.unity
+    guid: 90a6b6548ad5bed40a7843716de87946
   m_configObjects: {}

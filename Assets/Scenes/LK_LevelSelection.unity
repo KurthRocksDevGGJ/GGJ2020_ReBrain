@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38058bc65b4da3c499e2e2b3b6e8d053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scrollViewObject: {fileID: 759725266}
   _viewportContent: {fileID: 659038825}
   _prefabButton: {fileID: 1379182605}
   _filePath: 
@@ -764,6 +765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 659038826}
+  - component: {fileID: 659038827}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -791,6 +793,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &659038827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659038825}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1 &716535588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1884,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerLivesText: {fileID: 0}
   _gameOvahPanel: {fileID: 0}
+  _pauseMenuPanel: {fileID: 0}
   _isGameOver: 0
+  _isPauseMenu: 0
 --- !u!1 &1934271775
 GameObject:
   m_ObjectHideFlags: 0
