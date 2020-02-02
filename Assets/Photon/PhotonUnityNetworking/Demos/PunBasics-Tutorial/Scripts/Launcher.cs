@@ -108,7 +108,7 @@ namespace Photon.Pun.Demo.PunBasics
 			{
 				LogFeedback("Joining Room...");
 				// #Critical we need at this point to attempt joining a Random Room. If it fails, we'll get notified in OnJoinRandomFailed() and we'll create one.
-				PhotonNetwork.JoinRoom("Gameplay");
+				PhotonNetwork.JoinRoom("WaitingRoom");
 			}else{
 
 				LogFeedback("Connecting...");
@@ -156,7 +156,7 @@ namespace Photon.Pun.Demo.PunBasics
 				Debug.Log("PUN Basics Tutorial/Launcher: OnConnectedToMaster() was called by PUN. Now this client is connected and could join a room.\n Calling: PhotonNetwork.JoinRandomRoom(); Operation will fail if no room found");
 		
 				// #Critical: The first we try to do is to join a potential existing room. If there is, good, else, we'll be called back with OnJoinRandomFailed()
-				PhotonNetwork.JoinRandomRoom();
+				PhotonNetwork.JoinRoom("WaitingRoom");
 			}
 		}
 
@@ -176,7 +176,7 @@ namespace Photon.Pun.Demo.PunBasics
 		}
 
 		public override void OnJoinRoomFailed(short returnCode, string message) {
-			PhotonNetwork.CreateRoom("Gameplay", new RoomOptions { MaxPlayers = this.maxPlayersPerRoom});
+			PhotonNetwork.CreateRoom("WaitingRoom", new RoomOptions { MaxPlayers = this.maxPlayersPerRoom});
 		}
 
 
@@ -213,15 +213,7 @@ namespace Photon.Pun.Demo.PunBasics
 			Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.\nFrom here on, your game would be running.");
 		
 			// #Critical: We only load if we are the first player, else we rely on  PhotonNetwork.AutomaticallySyncScene to sync our instance scene.
-			if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
-			{
-				Debug.Log("We load the 'Room for 1' ");
-
-				// #Critical
-				// Load the Room Level. 
-				PhotonNetwork.LoadLevel("marcel_tests1");
-
-			}
+			PhotonNetwork.LoadLevel("LK_WaitingRoom_02");
 		}
 
 		#endregion

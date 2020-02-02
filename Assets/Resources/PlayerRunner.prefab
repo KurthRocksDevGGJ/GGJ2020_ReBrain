@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd08475b23aa548b7b9d28397d430b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraScrollSpeed: 3.8
+  cameraScrollSpeed: 1.9
   distance: 15
   height: 0
   heightSmoothLag: 0.3
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: -2687298294574162227}
+  hammerPrefab: {fileID: 0}
   moveSpeed: 24
   _overridePhotonValue: 0
 --- !u!114 &-2687298294574162227

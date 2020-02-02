@@ -61,6 +61,10 @@ namespace Photon.Pun.Demo.PunBasics
 				return;
 			}
 
+		}
+
+		public void StartLevel()
+		{
 			if (runnerPlayerPrefab && fixerPlayerPrefab == null) { // #Tip Never assume public properties of Components are filled up properly, always check and inform the developer of it.
 
 				Debug.LogError("<Color=Red><b>Missing</b></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
@@ -71,20 +75,24 @@ namespace Photon.Pun.Demo.PunBasics
 				{
 				    Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
-					if(PhotonNetwork.CurrentRoom.Players.Count == 1) {
-						// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-						PhotonNetwork.Instantiate(this.fixerPlayerPrefab.name, new Vector3(0f,5f,0f), Quaternion.identity, 0);
-					} else {
-						PhotonNetwork.Instantiate(this.runnerPlayerPrefab.name, new Vector3(0f,5f,0f), Quaternion.identity, 0);
+					
+					int count = 0;
+					foreach (var player in PhotonNetwork.CurrentRoom.Players)
+					{
+						count++;
+						if(count == 1)
+						{
+							PhotonNetwork.Instantiate(this.fixerPlayerPrefab.name, new Vector3(0f,5f,0f), Quaternion.identity, 0);
+						} else {
+							PhotonNetwork.Instantiate(this.runnerPlayerPrefab.name, new Vector3(0f,5f,0f), Quaternion.identity, 0);
+						}
 					}
 				}else{
-
 					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
 				}
 
 
 			}
-
 		}
 
 		/// <summary>
@@ -115,7 +123,7 @@ namespace Photon.Pun.Demo.PunBasics
 			{
 				Debug.LogFormat( "OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient ); // called before OnPlayerLeftRoom
 
-				LoadArena();
+				LoadArena("LK_WaitingRoom_02");
 			}
 		}
 
@@ -131,7 +139,7 @@ namespace Photon.Pun.Demo.PunBasics
 			{
 				Debug.LogFormat( "OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient ); // called before OnPlayerLeftRoom
 
-				LoadArena(); 
+				LoadArena("PunBasics-Launcher"); 
 			}
 		}
 
@@ -184,7 +192,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 			Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
 
-			PhotonNetwork.LoadLevel("_levelName");
+			PhotonNetwork.LoadLevel(_levelName);
 		}
 
 		#endregion

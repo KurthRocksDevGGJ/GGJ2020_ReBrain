@@ -9,36 +9,15 @@ EditorBuildSettings:
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Launcher.unity
     guid: bff77b01b50254edbb6edeeaba5ae8b3
   - enabled: 1
-    path: Assets/Scenes/marcel_tests.unity
-    guid: 917fd4fa60f1ccd40b6ffb575301f3fd
+    path: Assets/Scenes/LK_WaitingRoom_02.unity
+    guid: a66dd5bdcb17aef4dac1ca0111553e8c
   - enabled: 1
-    path: Assets/Scenes/LK_LevelSelection.unity
-    guid: 63ed29391cee3ab4faa336a440418ef6
-  - enabled: 1
-    path: Assets/Scenes/level0.unity
-    guid: eb4ce756f6c2b7449b624a9b33105afd
-  - enabled: 1
-    path: Assets/Scenes/level_springTest.unity
-    guid: 270101efd50b33841823ac7190d47a66
-  - enabled: 1
-    path: Assets/Scenes/levelthumi.unity
-    guid: fee7337abc1a1174aa864016e22c4449
-  - enabled: 1
-    path: Assets/Scenes/level_EXPERTThumi02.unity
-    guid: b8083aa1becc71d4f91ba210198e9aec
-  - enabled: 1
-    path: Assets/Scenes/level_Medium-wieeingutesSteakThumi04.unity
-    guid: 11dfd10897953384899bc3f94b1f6df1
+    path: Assets/Scenes/level_GAMETutorial0001.unity
+    guid: 6ddd8a7f6ef76ed4495ba567475113cb
   - enabled: 1
     path: Assets/Scenes/level_TutorialThumi01.unity
     guid: 5d2ab46348f63404aa2eb23743e6b625
   - enabled: 1
-    path: Assets/Scenes/level_untergroundThumi03.unity
-    guid: 879c9e0b8a461b94daddbf99d0366288
-  - enabled: 1
-    path: Assets/Scenes/LK_MainMenu.unity
-    guid: 90a6b6548ad5bed40a7843716de87946
-  - enabled: 1
-    path: Assets/Scenes/marcel_tests1.unity
+    path: Assets/Scenes/level_Final.unity
     guid: 1e4df20319ceafa49a76a02c3ca9ca4e
   m_configObjects: {}
