@@ -29,10 +29,14 @@ namespace Photon.Pun.Demo.PunBasics
                 var tilemap = hit.GetComponent<Tilemap>();
 
                 if(tilemap != null)
-                {                    
-                    tilemap.SetTile(tilemap.WorldToCell(tilemap.transform.position), null);
-                    Vector3Int v3 = tilemap.WorldToCell(tilemap.transform.position);
-                    Instantiate(myDemolitionPreFab, new Vector3(v3.x+0.5f,v3.y+0.5f), myDemolitionPreFab.transform.rotation);
+                {
+
+                    Vector2 v2 = hit.ClosestPoint(transform.position);
+                    Vector3Int v3 = tilemap.WorldToCell(v2);
+                    
+                    
+                    tilemap.SetTile(v3, null);                      
+                    Instantiate(myDemolitionPreFab, new Vector3(v3.x+0.5f,v3.y+0.5f,0), myDemolitionPreFab.transform.rotation);
                 }
 
                 //Destroy(hits[i].gameObject);
