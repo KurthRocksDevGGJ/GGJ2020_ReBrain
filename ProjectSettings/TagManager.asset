@@ -8,6 +8,9 @@ TagManager:
   - Environment
   - Ground
   - Bouncable
+  - spring
+  - hammer
+  - Collectibles
   - Runner
   layers:
   - Default
