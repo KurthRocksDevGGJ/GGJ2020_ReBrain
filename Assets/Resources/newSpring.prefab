@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2469535527296315019}
   - component: {fileID: -3101892477078145542}
   - component: {fileID: 2800195837598005616}
-  - component: {fileID: 1380492184297205730}
   - component: {fileID: 1222820912}
   - component: {fileID: 1222820905}
+  - component: {fileID: 8881476794860480219}
   m_Layer: 0
   m_Name: newSpring
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6291351847111596630, guid: bd8d431d7062c5e41ab2e01dddeba1b2,
+  m_Sprite: {fileID: 6291351847111596630, guid: 84bfa86e0d17d3b488a22097d309d71d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,11 +101,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.021093726, y: -1.3042042}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 4.34375}
+    oldSize: {x: 2, y: 1.71875}
     newSize: {x: 2, y: 4.34375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 2800195837598005616}
+  - {fileID: 8881476794860480219}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -151,21 +152,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
---- !u!111 &1380492184297205730
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6546258106835962048}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: f35a6012e62431a488c0568563cb776f, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &1222820912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb87908d2735946438b64f99079267c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceForce: 20
   anim: {fileID: 1222820905}
 --- !u!95 &1222820905
 Animator:
@@ -189,8 +176,8 @@ Animator:
   m_GameObject: {fileID: 6546258106835962048}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 73fc78afac029b545891695a9f5c6f4e, type: 2}
-  m_CullingMode: 0
+  m_Controller: {fileID: 9100000, guid: 83cd6164285a0ae4bbc10941d7f8b630, type: 2}
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -198,3 +185,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8881476794860480219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546258106835962048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 9
+    SynchronizeType: 1
+    Name: bounce
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
