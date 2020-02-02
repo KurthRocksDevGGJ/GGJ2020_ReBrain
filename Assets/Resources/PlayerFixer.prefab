@@ -441,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: -2687298294574162227}
   moveSpeed: 24
+  _overridePhotonValue: 0
 --- !u!114 &-2687298294574162227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +454,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b329f47f6c2f54e42927f9c3965c8954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerLives: 3
+  _playerCoins: 0
+  _canUseRewind: 1
+  _timeBody: {fileID: 0}
+  _soundClipJump: {fileID: 0}
+  _soundClipLanding: {fileID: 0}
+  _soundClipAttack: {fileID: 0}
+  _soundClipPowerUp: {fileID: 0}
   m_JumpForce: 500
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
