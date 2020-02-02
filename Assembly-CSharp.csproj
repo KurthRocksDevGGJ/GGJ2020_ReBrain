@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\PointInTime.cs" />
     <Compile Include="Assets\Scripts\TimeBody.cs" />
     <Compile Include="Assets\Scripts\bounceUp.cs" />
+    <Compile Include="Assets\Scripts\hammerTime.cs" />
     <Compile Include="Assets\Scripts\insideTest.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
