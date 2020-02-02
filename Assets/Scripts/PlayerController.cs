@@ -105,6 +105,21 @@ namespace Photon.Pun.Demo.PunBasics {
             UIManager.Instance.UpdateTravelDistance((int) (transform.position.x - _startPosition.x));
         }
 
+        public int GetCoins()
+        {
+            return _playerCoins;
+        }
+        public void RemoveCoins(int i)
+        {
+            if (i >=_playerCoins )
+            {
+                _playerCoins = 0;
+            }
+            else
+            {
+                _playerCoins -= i;
+            }
+        }
         public void Move(float move, bool crouch, bool jump) {
             // If crouching, check to see if the character can stand up
             if (!crouch) {
