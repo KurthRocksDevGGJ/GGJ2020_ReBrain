@@ -457,12 +457,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerLives: 3
   _playerCoins: 0
+  _hammerUsage: 0
   _canUseRewind: 1
   _timeBody: {fileID: 0}
-  _soundClipJump: {fileID: 0}
-  _soundClipLanding: {fileID: 0}
-  _soundClipAttack: {fileID: 0}
-  _soundClipPowerUp: {fileID: 0}
+  _soundClipJump: {fileID: 8300000, guid: 12ad0b45d958a6a4d9eaa842bcdf6895, type: 3}
+  _soundClipLanding: {fileID: 8300000, guid: 6e95325d9e380ff4383283ea0a2b8ba6, type: 3}
+  _soundClipAttack: {fileID: 8300000, guid: 8a4fbbab7a3ef574a9038a649a135158, type: 3}
+  _soundClipPowerUp: {fileID: 8300000, guid: b5916ab77935dd040813d43dc89541f6, type: 3}
   m_JumpForce: 500
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05

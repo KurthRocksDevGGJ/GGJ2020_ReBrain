@@ -9,12 +9,16 @@ namespace Photon.Pun.Demo.PunBasics {
         [SerializeField]
         private int _playerCoins = 0;
         [SerializeField]
+        private int _hammerUsage = 0;
+        [SerializeField]
         private bool _canUseRewind = true;
 
         [Header("Debug")]
         [SerializeField]
         private TimeBody _timeBody = null;
         //if (_canUseRewind) _timeBody.StartRewindTillEnd();
+        [SerializeField]
+        private Vector2 _startPosition = Vector2.zero;
 
         [Header("Player SFX Settings")]
         //[SerializeField]
@@ -72,11 +76,15 @@ namespace Photon.Pun.Demo.PunBasics {
             else {
                 UIManager.Instance.UpdatePlayerCoins(_playerCoins);
                 UIManager.Instance.UpdatePlayerLives(_playerLives);
+                //UIManager.Instance.UpdateHammerUsage(_hammerUsage);
+                UIManager.Instance.UpdateTravelDistance(0F);
             }
 
             _timeBody = GetComponent<TimeBody>();
             if (_timeBody == null)
                 Debug.LogWarning("Player::Start(): timebody not assigned.");
+
+            _startPosition = transform.position;
         }
 
         private void FixedUpdate() {
@@ -93,6 +101,8 @@ namespace Photon.Pun.Demo.PunBasics {
                         OnLandEvent.Invoke();
                 }
             }
+
+            UIManager.Instance.UpdateTravelDistance(transform.position.x - _startPosition.x);
         }
 
         public void Move(float move, bool crouch, bool jump) {
@@ -160,7 +170,6 @@ namespace Photon.Pun.Demo.PunBasics {
             }
         }
 
-
         private void Flip() {
             // Switch the way the player is labelled as facing.
             m_FacingRight = !m_FacingRight;
@@ -193,6 +202,15 @@ namespace Photon.Pun.Demo.PunBasics {
                     Collectible coinCollectible = _other.gameObject.GetComponent<Collectible>();
                     if (coinCollectible != null) {
                         _playerCoins += coinCollectible.GetCoinValue();
+                        
+                        /*
+                        if(_playerCoins >= 30) {
+                            _hammerUsage += 1;
+                            _playerCoins -= 30;
+                            UIManager.Instance.UpdateHammerUsage(_hammerUsage);
+                        }
+                        */
+
                         UIManager.Instance.UpdatePlayerCoins(_playerCoins);
                     }
 

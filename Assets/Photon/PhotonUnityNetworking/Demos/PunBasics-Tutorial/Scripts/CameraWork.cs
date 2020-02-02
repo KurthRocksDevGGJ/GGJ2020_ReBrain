@@ -55,23 +55,21 @@ namespace Photon.Pun.Demo.PunBasics
 
 		private GameObject _runnerGO;
 
-        #endregion
+		#endregion
 
-        #region MonoBehaviour Callbacks
+		#region MonoBehaviour Callbacks
 
-        /// <summary>
-        /// MonoBehaviour method called on GameObject by Unity during initialization phase
-        /// </summary>
-        void Start()
-		{
+		/// <summary>
+		/// MonoBehaviour method called on GameObject by Unity during initialization phase
+		/// </summary>
+		void Start() {
 			_runnerGO = GameObject.FindGameObjectWithTag("Runner");
-			Debug.Log(_runnerGO);
+			if (_runnerGO == null)
+				Debug.LogWarning("CameraWork::Start(): Runner not found", _runnerGO);
 			// Start following the target if wanted.
-			if (followOnStart)
-			{
+			if (followOnStart) {
 				OnStartFollowing();
 			}
-
 		}
 
 		/// <summary>
