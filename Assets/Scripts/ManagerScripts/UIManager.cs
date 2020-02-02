@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     private Text _recordHighscoreText = null;
     [SerializeField]
+    private Text _recordCoinsText = null;
+    [SerializeField]
     private GameObject _gameOvahPanel = null;
     [SerializeField]
     private GameObject _pauseMenuPanel = null;
@@ -29,6 +31,7 @@ public class UIManager : MonoBehaviour {
     private bool _isPauseMenu = false;
 
     private float _scoreDistance = 0F;
+    private int _scoreCoins = 0;
 
     private void Awake() {
         if (Instance == null)
@@ -51,13 +54,18 @@ public class UIManager : MonoBehaviour {
         if (_travelDistanceText == null)
             Debug.LogWarning("UIManager::Start(): Traveling text element not set.");
         if (_recordHighscoreText == null)
-            Debug.LogWarning("UIManager::Start(): Record text element not set.");
-        
+            Debug.LogWarning("UIManager::Start(): Record score text element not set.");
+        if (_recordCoinsText == null)
+            Debug.LogWarning("UIManager::Start(): Record coins text element not set.");
+
         if (_gameOvahPanel == null)
             Debug.LogWarning("UIManager::Start(): GameOver panel not set.");
 
         _scoreDistance = PlayerPrefs.GetFloat("Record_Distance", 0F);
         UpdateRecordDistance(_scoreDistance);
+
+        _scoreCoins = PlayerPrefs.GetInt("Record_Coins", 0);
+        UpdateRecordCoins(_scoreCoins);
     }
 
     private void Update() {
@@ -113,6 +121,17 @@ public class UIManager : MonoBehaviour {
     // TODO: Animated Coins Sprite
     public void UpdatePlayerCoins(int _coins) {
         _playerCoinsText.text = "" + _coins.ToString();
+
+        if (_coins > _scoreCoins) {
+            PlayerPrefs.SetInt("Record_Coins", _coins);
+            UpdateRecordCoins(_coins);
+            _scoreCoins = _coins;
+        } else {
+            // Debug.Log("" + _coins + " - " + _scoreCoins);
+        }
+    }
+    private void UpdateRecordCoins(int _coins) {
+        _recordCoinsText.text = _coins.ToString() + " coins";
     }
 
     /*
@@ -127,8 +146,9 @@ public class UIManager : MonoBehaviour {
         if (_travelDistance > _scoreDistance) {
             PlayerPrefs.SetFloat("Record_Distance", _travelDistance);
             UpdateRecordDistance(_travelDistance);
+            _scoreDistance = _travelDistance;
         } else {
-            Debug.Log("" + _travelDistance + " - " + _scoreDistance);
+            // Debug.Log("" + _travelDistance + " - " + _scoreDistance);
         }
     }
     public void UpdateRecordDistance(float _recordDistance) {
