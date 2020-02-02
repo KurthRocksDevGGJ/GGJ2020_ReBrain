@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun.Demo.PunBasics;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class UIHelper_LevelSelection : MonoBehaviour {
     private GameObject _gridContainer = null;
     [SerializeField]
     private Button _prefabButton = null;
+    [SerializeField]
+    private bool _canStartGame = true;
 
     [Header("Debug Info")]
     [SerializeField]
@@ -62,8 +65,6 @@ public class UIHelper_LevelSelection : MonoBehaviour {
         // ScrollViewer Content Size
         RectTransform _scrollViewRect = _scrollViewObject.GetComponent<RectTransform>();
 
-        Debug.Log(_scrollViewRect.rect.width + " / (30 + " + _btnDimension.width + ") = " + (_scrollViewRect.rect.width / (30 + _btnDimension.width)));
-
 
         for (int i = 0; i < _unityLevelNames.Length; i++) {
             Button button = (Button)Instantiate(_prefabButton);
@@ -85,6 +86,7 @@ public class UIHelper_LevelSelection : MonoBehaviour {
         }
 
         /*
+        Debug.Log(_scrollViewRect.rect.width + " / (30 + " + _btnDimension.width + ") = " + (_scrollViewRect.rect.width / (30 + _btnDimension.width)));
         for (int i = 0; i < _unityLevelNames.Length; i++) {
             Button button = (Button)Instantiate(_prefabButton);
             button.gameObject.SetActive(true);
@@ -115,8 +117,13 @@ public class UIHelper_LevelSelection : MonoBehaviour {
 
     private void OnUIButtonClick(Button button) {
         string levelName = button.transform.GetChild(0).GetComponent<Text>().text;
+        /*
         if(UIManager.Instance)
             UIManager.Instance.LoadScene(levelName);
+        */
+
+        if(_canStartGame)
+            GameManager.Instance.LoadArena(levelName);
     }
 }
 

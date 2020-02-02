@@ -1946,6 +1946,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerLivesText: {fileID: 0}
   _playerCoinsText: {fileID: 0}
+  _hammerText: {fileID: 0}
+  _travelDistanceText: {fileID: 0}
+  _recordHighscoreText: {fileID: 0}
+  _recordCoinsText: {fileID: 0}
   _gameOvahPanel: {fileID: 0}
   _pauseMenuPanel: {fileID: 0}
   _isGameOver: 0
@@ -1999,7 +2003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2045954219
 Transform:
   m_ObjectHideFlags: 0

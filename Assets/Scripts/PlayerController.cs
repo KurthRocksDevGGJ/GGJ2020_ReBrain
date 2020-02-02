@@ -9,12 +9,16 @@ namespace Photon.Pun.Demo.PunBasics {
         [SerializeField]
         private int _playerCoins = 0;
         [SerializeField]
+        private int _hammerUsage = 0;
+        [SerializeField]
         private bool _canUseRewind = true;
 
         [Header("Debug")]
         [SerializeField]
         private TimeBody _timeBody = null;
         //if (_canUseRewind) _timeBody.StartRewindTillEnd();
+        [SerializeField]
+        private Vector2 _startPosition = Vector2.zero;
 
         [Header("Player SFX Settings")]
         //[SerializeField]
@@ -72,11 +76,17 @@ namespace Photon.Pun.Demo.PunBasics {
             else {
                 UIManager.Instance.UpdatePlayerCoins(_playerCoins);
                 UIManager.Instance.UpdatePlayerLives(_playerLives);
+                //UIManager.Instance.UpdateHammerUsage(_hammerUsage);
+                UIManager.Instance.UpdateTravelDistance(0);
             }
 
             _timeBody = GetComponent<TimeBody>();
             if (_timeBody == null)
                 Debug.LogWarning("Player::Start(): timebody not assigned.");
+
+            _startPosition = transform.position;
+
+            _playerAudioSource = GetComponent<AudioSource>();
         }
 
         private void FixedUpdate() {
@@ -93,8 +103,29 @@ namespace Photon.Pun.Demo.PunBasics {
                         OnLandEvent.Invoke();
                 }
             }
+
+            UIManager.Instance.UpdateTravelDistance((int) (transform.position.x - _startPosition.x));
         }
 
+        public int GetCoins()
+        {
+            //Debug.Log("Aktuelle Coins: " +_playerCoins);
+            return _playerCoins;
+        }
+        public void RemoveCoins(int i)
+        {
+           // Debug.Log("RM Aktuelle Coins: " + _playerCoins);
+           // Debug.Log("RM abgezogen werden: " + i);
+            if (i >=_playerCoins )
+            {
+                _playerCoins = 0;                
+            }
+            else
+            {                
+                _playerCoins -= i;                
+            }
+            UIManager.Instance.UpdatePlayerCoins(_playerCoins);
+        }
         public void Move(float move, bool crouch, bool jump) {
             // If crouching, check to see if the character can stand up
             if (!crouch) {
@@ -154,12 +185,12 @@ namespace Photon.Pun.Demo.PunBasics {
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
                 
                 if (_playerAudioSource != null && _soundClipJump != null) {
+                    _playerAudioSource.volume = 1;
                     _playerAudioSource.clip = _soundClipJump;
                     _playerAudioSource.Play();
                 }
             }
         }
-
 
         private void Flip() {
             // Switch the way the player is labelled as facing.
@@ -186,6 +217,7 @@ namespace Photon.Pun.Demo.PunBasics {
                     Debug.Log($"Player::Found coin '{_other.gameObject.name}'");
 
                     if (_playerAudioSource != null && _soundClipPowerUp != null) {
+                        _playerAudioSource.volume = .3F;
                         _playerAudioSource.clip = _soundClipPowerUp;
                         _playerAudioSource.Play();
                     }
@@ -193,6 +225,15 @@ namespace Photon.Pun.Demo.PunBasics {
                     Collectible coinCollectible = _other.gameObject.GetComponent<Collectible>();
                     if (coinCollectible != null) {
                         _playerCoins += coinCollectible.GetCoinValue();
+                        
+                        /*
+                        if(_playerCoins >= 30) {
+                            _hammerUsage += 1;
+                            _playerCoins -= 30;
+                            UIManager.Instance.UpdateHammerUsage(_hammerUsage);
+                        }
+                        */
+
                         UIManager.Instance.UpdatePlayerCoins(_playerCoins);
                     }
 

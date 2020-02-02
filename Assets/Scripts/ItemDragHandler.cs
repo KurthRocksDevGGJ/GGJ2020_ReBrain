@@ -10,6 +10,7 @@ namespace Photon.Pun.Demo.PunBasics
     {    
         [SerializeField]
         private GameObject myPrefab;
+        private int coinRemover = 2;
     
 
         public void OnDrag(PointerEventData eventData)
@@ -22,7 +23,21 @@ namespace Photon.Pun.Demo.PunBasics
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            PhotonNetwork.Instantiate(myPrefab.name, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y),myPrefab.transform.rotation);
+            PlayerController pRef = GameObject.FindGameObjectWithTag("Runner").GetComponent<PlayerController>();
+            if (pRef == null)
+            {
+                //Debug.Log("kein player gefunden");
+            }
+            if (pRef.GetCoins() > coinRemover)
+            {
+                //Debug.Log("möchte abziehen: " + 5);
+                PhotonNetwork.Instantiate(myPrefab.name, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), myPrefab.transform.rotation);
+                pRef.RemoveCoins(coinRemover);
+            }
+            else
+            {
+                Debug.Log("not enough coins");
+            }
             ResetPosition();
         }
 
