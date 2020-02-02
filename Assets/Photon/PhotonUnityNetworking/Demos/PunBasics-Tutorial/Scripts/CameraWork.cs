@@ -53,6 +53,8 @@ namespace Photon.Pun.Demo.PunBasics
 		// Represents the position we are trying to reach using SmoothDamp()
 		private float targetHeight = 100000.0f;
 
+		private GameObject _runnerGO;
+
         #endregion
 
         #region MonoBehaviour Callbacks
@@ -62,6 +64,8 @@ namespace Photon.Pun.Demo.PunBasics
         /// </summary>
         void Start()
 		{
+			_runnerGO = GameObject.FindGameObjectWithTag("Runner");
+			Debug.Log(_runnerGO);
 			// Start following the target if wanted.
 			if (followOnStart)
 			{
@@ -150,6 +154,17 @@ namespace Photon.Pun.Demo.PunBasics
 
 		void MoveCamera() {
 			cameraTransform.position += new Vector3(cameraScrollSpeed * Time.deltaTime, 0, 0);
+			if(_runnerGO == null)
+			{
+				if(GameObject.FindGameObjectWithTag("Runner"))
+				{
+					_runnerGO = GameObject.FindGameObjectWithTag("Runner");
+				}
+			} 
+			else 
+			{
+				cameraTransform.position = new Vector3(cameraTransform.position.x, _runnerGO.transform.position.y, cameraTransform.position.z);
+			}
 		}
 	   
 		/// <summary>

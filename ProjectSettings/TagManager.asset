@@ -11,6 +11,7 @@ TagManager:
   - spring
   - hammer
   - Collectibles
+  - Runner
   layers:
   - Default
   - TransparentFX

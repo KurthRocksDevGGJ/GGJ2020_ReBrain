@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2822572190355475005}
   - component: {fileID: -2684315630405000116}
   - component: {fileID: -1316679623185204672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: slope2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 1
+  Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: -1316679623185204672}

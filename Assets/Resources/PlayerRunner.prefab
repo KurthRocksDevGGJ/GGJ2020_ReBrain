@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 218837843076152794}
   m_Layer: 0
   m_Name: PlayerRunner
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -488,7 +488,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 7726826286282656300}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 96c4d6c2246772341a8be9a7aa077b75, type: 2}
+  m_Material: {fileID: 6200000, guid: 1b6b7f881a0629c45b60631158cc04bf, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
+  m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &218837843076152794

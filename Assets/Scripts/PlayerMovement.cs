@@ -19,7 +19,8 @@ namespace Photon.Pun.Demo.PunBasics {
             if (photonView.IsMine || _overridePhotonValue) {
                 _horizontalMove = moveSpeed;
 
-                if (Input.GetButtonDown("Jump")) {
+                if(Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0)) 
+                {
                     _jump = true;
                 }
             }
