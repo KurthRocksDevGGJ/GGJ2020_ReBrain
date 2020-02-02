@@ -6,6 +6,7 @@ namespace Photon.Pun.Demo.PunBasics {
     public class bounceUp : MonoBehaviourPunCallbacks
        
     {
+        
         [SerializeField]
         private Animator anim;
         private bool isTriggered = false;
@@ -28,7 +29,7 @@ namespace Photon.Pun.Demo.PunBasics {
             if (playerM != null && !isTriggered)
             {
                 anim.SetTrigger("bounce");
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 30), ForceMode2D.Impulse);
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 30), ForceMode2D.Impulse);                
                 isTriggered = true;
             }
         }
