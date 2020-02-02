@@ -8,6 +8,7 @@ TagManager:
   - Environment
   - Ground
   - Bouncable
+  - Runner
   layers:
   - Default
   - TransparentFX

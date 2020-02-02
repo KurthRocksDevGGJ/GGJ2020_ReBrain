@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 7803186990610651428}
   m_Layer: 0
   m_Name: PlayerRunner
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b329f47f6c2f54e42927f9c3965c8954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 500
+  m_JumpForce: 560
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 0
@@ -478,7 +478,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 7726826286282656300}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 96c4d6c2246772341a8be9a7aa077b75, type: 2}
+  m_Material: {fileID: 6200000, guid: 1b6b7f881a0629c45b60631158cc04bf, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -498,6 +498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
+  m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
