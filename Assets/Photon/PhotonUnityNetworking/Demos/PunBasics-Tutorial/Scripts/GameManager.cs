@@ -175,7 +175,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 			Debug.LogFormat( "PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount );
 
-			PhotonNetwork.LoadLevel("marcel_tests");
+			PhotonNetwork.LoadLevel("marcel_tests1");
 		}
 
 		#endregion
