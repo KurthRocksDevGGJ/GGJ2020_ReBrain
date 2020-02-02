@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: -2687298294574162227}
   - component: {fileID: 4907687335576250082}
   - component: {fileID: 7803186990610651428}
+  - component: {fileID: 218837843076152794}
   m_Layer: 0
   m_Name: PlayerRunner
   m_TagString: Untagged
@@ -441,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: -2687298294574162227}
   moveSpeed: 24
+  _overridePhotonValue: 0
 --- !u!114 &-2687298294574162227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +455,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b329f47f6c2f54e42927f9c3965c8954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerLives: 3
+  _playerCoins: 0
+  _canUseRewind: 1
+  _timeBody: {fileID: 0}
+  _soundClipJump: {fileID: 0}
+  _soundClipLanding: {fileID: 0}
+  _soundClipAttack: {fileID: 0}
+  _soundClipPowerUp: {fileID: 0}
   m_JumpForce: 500
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
@@ -501,3 +511,19 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &218837843076152794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7726826286282656300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff219b32443b4f042a0152af16a909a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordTime: 5
+  _isRewinding: 0
+  _pointsInTime: []
+  _rigidbody2D: {fileID: 0}

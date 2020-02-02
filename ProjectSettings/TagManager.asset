@@ -10,6 +10,7 @@ TagManager:
   - Bouncable
   - spring
   - hammer
+  - Collectibles
   layers:
   - Default
   - TransparentFX
