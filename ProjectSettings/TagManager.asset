@@ -8,8 +8,7 @@ TagManager:
   - Environment
   - Ground
   - Bouncable
-  - spring
-  - hammer
+  - Runner
   layers:
   - Default
   - TransparentFX
