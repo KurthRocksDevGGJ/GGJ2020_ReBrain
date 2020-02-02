@@ -62,8 +62,6 @@ public class UIHelper_LevelSelection : MonoBehaviour {
         // ScrollViewer Content Size
         RectTransform _scrollViewRect = _scrollViewObject.GetComponent<RectTransform>();
 
-        Debug.Log(_scrollViewRect.rect.width + " / (30 + " + _btnDimension.width + ") = " + (_scrollViewRect.rect.width / (30 + _btnDimension.width)));
-
 
         for (int i = 0; i < _unityLevelNames.Length; i++) {
             Button button = (Button)Instantiate(_prefabButton);
@@ -85,6 +83,7 @@ public class UIHelper_LevelSelection : MonoBehaviour {
         }
 
         /*
+        Debug.Log(_scrollViewRect.rect.width + " / (30 + " + _btnDimension.width + ") = " + (_scrollViewRect.rect.width / (30 + _btnDimension.width)));
         for (int i = 0; i < _unityLevelNames.Length; i++) {
             Button button = (Button)Instantiate(_prefabButton);
             button.gameObject.SetActive(true);

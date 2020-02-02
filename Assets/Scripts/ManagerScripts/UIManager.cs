@@ -13,6 +13,12 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     private Text _playerCoinsText = null;
     [SerializeField]
+    private Text _hammerText = null;
+    [SerializeField]
+    private Text _travelDistanceText = null;
+    [SerializeField]
+    private Text _recordHighscoreText = null;
+    [SerializeField]
     private GameObject _gameOvahPanel = null;
     [SerializeField]
     private GameObject _pauseMenuPanel = null;
@@ -21,6 +27,8 @@ public class UIManager : MonoBehaviour {
     private bool _isGameOver = false;
     [SerializeField]
     private bool _isPauseMenu = false;
+
+    private float _scoreDistance = 0F;
 
     private void Awake() {
         if (Instance == null)
@@ -33,11 +41,23 @@ public class UIManager : MonoBehaviour {
 
     private void Start() {
         if (_playerLivesText == null)
-            Debug.LogError("UIManager::Start(): Lives text element not set.");
+            Debug.LogWarning("UIManager::Start(): Lives text element not set.");
         if (_playerCoinsText == null)
-            Debug.LogError("UIManager::Start(): Coins text element not set.");
+            Debug.LogWarning("UIManager::Start(): Coins text element not set.");
+        /*
+        if (_hammerText == null)
+            Debug.LogWarning("UIManager::Start(): Hammer text element not set.");
+        */
+        if (_travelDistanceText == null)
+            Debug.LogWarning("UIManager::Start(): Traveling text element not set.");
+        if (_recordHighscoreText == null)
+            Debug.LogWarning("UIManager::Start(): Record text element not set.");
+        
         if (_gameOvahPanel == null)
-            Debug.LogError("UIManager::Start(): GameOver panel not set.");
+            Debug.LogWarning("UIManager::Start(): GameOver panel not set.");
+
+        _scoreDistance = PlayerPrefs.GetFloat("Record_Distance", 0F);
+        UpdateRecordDistance(_scoreDistance);
     }
 
     private void Update() {
@@ -93,6 +113,26 @@ public class UIManager : MonoBehaviour {
     // TODO: Animated Coins Sprite
     public void UpdatePlayerCoins(int _coins) {
         _playerCoinsText.text = "" + _coins.ToString();
+    }
+
+    /*
+    public void UpdateHammerUsage(int _hammerUsage) {
+        _hammerText.text = _hammerUsage.ToString();
+    }
+    */
+
+    public void UpdateTravelDistance(float _travelDistance) {
+        _travelDistanceText.text = _travelDistance.ToString() + " m";
+
+        if (_travelDistance > _scoreDistance) {
+            PlayerPrefs.SetFloat("Record_Distance", _travelDistance);
+            UpdateRecordDistance(_travelDistance);
+        } else {
+            Debug.Log("" + _travelDistance + " - " + _scoreDistance);
+        }
+    }
+    public void UpdateRecordDistance(float _recordDistance) {
+        _recordHighscoreText.text = _recordDistance.ToString() + " m";
     }
 
     public void ShowGameOvahPanel() {
