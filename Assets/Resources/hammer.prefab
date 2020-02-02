@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: -1415067844040540413}
   - component: {fileID: 1114244756695519218}
   - component: {fileID: 7490894815788138767}
+  - component: {fileID: 5930994501975249487}
+  - component: {fileID: -3090170506811789328}
   m_Layer: 0
   m_Name: hammer
   m_TagString: hammer
@@ -107,6 +109,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 5900523131056699012}
+  - {fileID: 1114244756695519218}
+  - {fileID: -3090170506811789328}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -189,3 +193,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e841b634b60e9944bdd131680e59404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myDemolitionPreFab: {fileID: 4968602083656203519, guid: 7e82806d39041c34cb84c9ed320451db,
+    type: 3}
+--- !u!50 &5930994501975249487
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546258106835962048}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &-3090170506811789328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546258106835962048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7cb724808c322458aa4d15f5035fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3

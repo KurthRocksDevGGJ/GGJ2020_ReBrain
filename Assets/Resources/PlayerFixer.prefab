@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: -2687298294574162227}
+  hammerPrefab: {fileID: 0}
   moveSpeed: 24
   _overridePhotonValue: 0
 --- !u!114 &-2687298294574162227

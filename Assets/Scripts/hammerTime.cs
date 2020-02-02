@@ -22,6 +22,7 @@ namespace Photon.Pun.Demo.PunBasics
         // Update is called once per frame
         void Update()
         {
+            gameObject.transform.Rotate(Vector3.up, 10 * Time.deltaTime, Space.Self);
             Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position,new Vector2(2,2), 1 << LayerMask.NameToLayer("GroundLayer"));
             
             foreach (var hit in hits)
@@ -36,7 +37,7 @@ namespace Photon.Pun.Demo.PunBasics
                     
                     
                     tilemap.SetTile(v3, null);                      
-                    Instantiate(myDemolitionPreFab, new Vector3(v3.x+0.5f,v3.y+0.5f,0), myDemolitionPreFab.transform.rotation);
+                    PhotonNetwork.Instantiate(myDemolitionPreFab.name, new Vector3(v3.x+0.5f,v3.y+0.5f,0), myDemolitionPreFab.transform.rotation);
                 }
 
                 //Destroy(hits[i].gameObject);
