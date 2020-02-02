@@ -77,7 +77,7 @@ namespace Photon.Pun.Demo.PunBasics {
                 UIManager.Instance.UpdatePlayerCoins(_playerCoins);
                 UIManager.Instance.UpdatePlayerLives(_playerLives);
                 //UIManager.Instance.UpdateHammerUsage(_hammerUsage);
-                UIManager.Instance.UpdateTravelDistance(0F);
+                UIManager.Instance.UpdateTravelDistance(0);
             }
 
             _timeBody = GetComponent<TimeBody>();
@@ -102,7 +102,7 @@ namespace Photon.Pun.Demo.PunBasics {
                 }
             }
 
-            UIManager.Instance.UpdateTravelDistance(transform.position.x - _startPosition.x);
+            UIManager.Instance.UpdateTravelDistance((int) (transform.position.x - _startPosition.x));
         }
 
         public void Move(float move, bool crouch, bool jump) {

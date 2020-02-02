@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour {
         if (_gameOvahPanel == null)
             Debug.LogWarning("UIManager::Start(): GameOver panel not set.");
 
-        _scoreDistance = PlayerPrefs.GetFloat("Record_Distance", 0F);
+        _scoreDistance = PlayerPrefs.GetInt("Record_Distance", 0);
         UpdateRecordDistance(_scoreDistance);
 
         _scoreCoins = PlayerPrefs.GetInt("Record_Coins", 0);
@@ -140,11 +140,11 @@ public class UIManager : MonoBehaviour {
     }
     */
 
-    public void UpdateTravelDistance(float _travelDistance) {
+    public void UpdateTravelDistance(int _travelDistance) {
         _travelDistanceText.text = _travelDistance.ToString() + " m";
 
         if (_travelDistance > _scoreDistance) {
-            PlayerPrefs.SetFloat("Record_Distance", _travelDistance);
+            PlayerPrefs.SetInt("Record_Distance", _travelDistance);
             UpdateRecordDistance(_travelDistance);
             _scoreDistance = _travelDistance;
         } else {
