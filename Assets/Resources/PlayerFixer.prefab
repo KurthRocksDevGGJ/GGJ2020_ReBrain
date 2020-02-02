@@ -456,8 +456,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerLives: 3
   _playerCoins: 0
+  _hammerUsage: 0
   _canUseRewind: 1
   _timeBody: {fileID: 0}
+  _startPosition: {x: 0, y: 0}
   _soundClipJump: {fileID: 0}
   _soundClipLanding: {fileID: 0}
   _soundClipAttack: {fileID: 0}

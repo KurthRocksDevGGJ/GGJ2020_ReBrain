@@ -189,3 +189,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e841b634b60e9944bdd131680e59404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myDemolitionPreFab: {fileID: 0}

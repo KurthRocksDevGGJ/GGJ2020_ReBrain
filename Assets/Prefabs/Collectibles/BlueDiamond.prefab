@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectibleType: 1
-  _coinValue: 5
+  _coinValue: 1
 --- !u!70 &271839900
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
