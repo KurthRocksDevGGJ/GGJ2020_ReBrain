@@ -107,18 +107,22 @@ namespace Photon.Pun.Demo.PunBasics {
 
         public int GetCoins()
         {
+            //Debug.Log("Aktuelle Coins: " +_playerCoins);
             return _playerCoins;
         }
         public void RemoveCoins(int i)
         {
+           // Debug.Log("RM Aktuelle Coins: " + _playerCoins);
+           // Debug.Log("RM abgezogen werden: " + i);
             if (i >=_playerCoins )
             {
-                _playerCoins = 0;
+                _playerCoins = 0;                
             }
             else
-            {
-                _playerCoins -= i;
+            {                
+                _playerCoins -= i;                
             }
+            UIManager.Instance.UpdatePlayerCoins(_playerCoins);
         }
         public void Move(float move, bool crouch, bool jump) {
             // If crouching, check to see if the character can stand up
