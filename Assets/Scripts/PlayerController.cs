@@ -85,6 +85,8 @@ namespace Photon.Pun.Demo.PunBasics {
                 Debug.LogWarning("Player::Start(): timebody not assigned.");
 
             _startPosition = transform.position;
+
+            _playerAudioSource = GetComponent<AudioSource>();
         }
 
         private void FixedUpdate() {
@@ -183,6 +185,7 @@ namespace Photon.Pun.Demo.PunBasics {
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
                 
                 if (_playerAudioSource != null && _soundClipJump != null) {
+                    _playerAudioSource.volume = 1;
                     _playerAudioSource.clip = _soundClipJump;
                     _playerAudioSource.Play();
                 }
@@ -214,6 +217,7 @@ namespace Photon.Pun.Demo.PunBasics {
                     Debug.Log($"Player::Found coin '{_other.gameObject.name}'");
 
                     if (_playerAudioSource != null && _soundClipPowerUp != null) {
+                        _playerAudioSource.volume = .3F;
                         _playerAudioSource.clip = _soundClipPowerUp;
                         _playerAudioSource.Play();
                     }
