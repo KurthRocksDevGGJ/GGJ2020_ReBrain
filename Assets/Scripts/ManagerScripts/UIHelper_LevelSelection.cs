@@ -11,6 +11,8 @@ public class UIHelper_LevelSelection : MonoBehaviour {
     [SerializeField]
     private GameObject _viewportContent = null;
     [SerializeField]
+    private GameObject _gridContainer = null;
+    [SerializeField]
     private Button _prefabButton = null;
 
     [Header("Debug Info")]
@@ -60,9 +62,29 @@ public class UIHelper_LevelSelection : MonoBehaviour {
         // ScrollViewer Content Size
         RectTransform _scrollViewRect = _scrollViewObject.GetComponent<RectTransform>();
 
-        float space = 60F;
-        Debug.Log("" + _scrollViewRect.rect.width / (space + _btnDimension.width));
+        Debug.Log(_scrollViewRect.rect.width + " / (30 + " + _btnDimension.width + ") = " + (_scrollViewRect.rect.width / (30 + _btnDimension.width)));
 
+
+        for (int i = 0; i < _unityLevelNames.Length; i++) {
+            Button button = (Button)Instantiate(_prefabButton);
+            button.gameObject.SetActive(true);
+            button.transform.SetParent(_gridContainer.transform);
+
+            button.onClick.AddListener(() => OnUIButtonClick(button));
+
+            button.transform.GetChild(0).GetComponent<Text>().text = _unityLevelNames[i];
+
+            button.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            //button.GetComponent<RectTransform>().position = new Vector3(_btnPosition.x + (i * (_btnDimension.width + 60)), _btnPosition.y, _btnPosition.z);
+            button.GetComponent<RectTransform>().sizeDelta = new Vector2(_btnDimension.width, _btnDimension.height);
+
+            // Button colors...
+            button.GetComponent<Image>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 0f, 1f, 1F, 1F);
+            Color color = button.GetComponent<Image>().color;
+            button.transform.GetChild(0).GetComponent<Text>().color = new Color(1.0F - color.r, 1.0F - color.g, 1.0F - color.b);
+        }
+
+        /*
         for (int i = 0; i < _unityLevelNames.Length; i++) {
             Button button = (Button)Instantiate(_prefabButton);
             button.gameObject.SetActive(true);
@@ -88,6 +110,7 @@ public class UIHelper_LevelSelection : MonoBehaviour {
             Debug.Log("" + a + " # " + _scrollViewRect.rect);
             Debug.Log("" + _btnDimension);
         }
+        */
     }
 
     private void OnUIButtonClick(Button button) {
